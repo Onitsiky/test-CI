@@ -21,7 +21,10 @@ jobs:
           node-version: '17.x'
       
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install --location=global mocha
+          npm install --location=global chai
         
       - name: Run tests
         run: npm test 
