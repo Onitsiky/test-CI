@@ -1,4 +1,5 @@
-const { expect } = require("chai")
+import { expect } from "chai";
+import  addnumber  from "./index.js"
 
 describe("Should return true of false", () => {
     it("Should return true", ()=> {

@@ -1,4 +1,4 @@
-function addnumber(a,b){
+const addnumber = (a,b) => {
     let sum = a+b;
     if(sum > 0){
         return true;
@@ -7,3 +7,4 @@ function addnumber(a,b){
         return false;
     }
 }
+export default addnumber;
