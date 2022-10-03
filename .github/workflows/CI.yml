@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches:
+     - main
+  pull_request:
+    branches:
+     - main
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.5.0
+        with:
+          node-version: '17.x'
+      
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run tests
+        run: npm test 
+          
+        
+    
