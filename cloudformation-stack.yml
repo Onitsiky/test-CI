@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description : A simple cloud formation for s3 bucket creation.
+
+Parameters:
+  MyBucket: { Type: String, Default: "bucky-bucket" }
+
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy : Retain
+    Properties:
+      BucketName:
+        Ref: MyBucket
+      AccessControl: LogDeliveryWrite 
