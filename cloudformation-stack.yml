@@ -11,4 +11,3 @@ Resources:
     Properties:
       BucketName:
         Ref: MyBucket
-      AccessControl: LogDeliveryWrite 
