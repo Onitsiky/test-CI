@@ -6,8 +6,9 @@ Parameters:
 
 Resources:
   S3Bucket:
-    Type: 'AWS::S3::Bucket'
-    DeletionPolicy : Retain
+    Type: AWS::S3::Bucket
     Properties:
-      BucketName:
+      BucketName: 
         Ref: MyBucket
+      VersioningConfiguration:
+        Status: Enabled
